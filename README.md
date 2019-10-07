@@ -1,1 +1,1 @@
-# slutspurt_fortnox
+# Combined client and server for the Boxinator project
