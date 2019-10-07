@@ -66,6 +66,8 @@
    During installtion set root password to *YellowBanana1!*<br>
    Create a database without any tables (in MySQL Workbech) and name the DB: *boxinator*
 
+
+## Good reads
 <br><br><br>
 https://www.codejava.net/frameworks/hibernate/hibernate-one-to-many-association-on-join-table-annotations-example<br>
 https://www.codejava.net/frameworks/hibernate/hibernate-one-to-many-association-annotations-example<br>
