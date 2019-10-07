@@ -1,7 +1,5 @@
 # boxinator
 
-This is just a test repo with example code for *REST* and *Spring*
-
 ## Install the dev. environment
 
 * Download and install Java runtime from:<br>
@@ -56,3 +54,8 @@ https://enterprisecraftsmanship.com/posts/database-versioning-best-practices/
 <br><br><br
 https://www.vogella.com/tutorials/JUnit/article.html
 <br><br><br>
+
+
+## running tests
+  <br><br>
+  All of the tests are run throuth eclipse´s built in j-unit test runner. simply run the tests from src/test/java/boxinator/BoxTest.java as a j-unit test.
