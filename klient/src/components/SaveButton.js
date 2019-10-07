@@ -19,20 +19,23 @@ class SaveButton extends Component {
         <div className={this.props.saved} hidden={!this.props.hideSave}>
           <p>Saved box</p>
         </div>
-        <div className={this.props.valid}>
-          <p hidden={!this.props.serverErrorBanner}>
+        <div>
+          <p className="errorText" hidden={!this.props.serverErrorBanner}>
             An error occured while uploading a box
           </p>
-          <p hidden={!this.props.serverErrors.name}>
+          <p className="errorText" hidden={!this.props.serverErrors.name}>
             The name is not recognized ny the server
           </p>
-          <p hidden={!this.props.serverErrors.weight}>
+          <p className="errorText" hidden={!this.props.serverErrors.weight}>
             The weight is not valid
           </p>
-          <p hidden={!this.props.serverErrors.color}>
+          <p className="errorText" hidden={!this.props.serverErrors.color}>
             The color is not a valid color
           </p>
-          <p hidden={!this.props.serverErrors.destination}>
+          <p
+            className="errorText"
+            hidden={!this.props.serverErrors.destination}
+          >
             The destination is not a valid destination
           </p>
         </div>

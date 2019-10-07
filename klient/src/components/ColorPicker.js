@@ -4,15 +4,22 @@ import { connect } from "react-redux";
 class ColorPicker extends Component {
   render() {
     return (
-      <div className={this.props.valid}>
+      <div id="input-wrapper">
         Color
-        <input
-          type="color"
-          value={this.props.color}
-          onBlur={this.props.onvalidate}
-          onChange={this.props.onColorChange}
-        />
-        <div>{this.props.errors}</div>
+        <br />
+        <div
+          style={{ backgroundColor: this.props.color }}
+          className={this.props.valid}
+        >
+          <input
+            id="picker"
+            type="color"
+            value={this.props.color}
+            onBlur={this.props.onvalidate}
+            onChange={this.props.onColorChange}
+          />
+        </div>
+        <div className="errorText">{this.props.errors}</div>
       </div>
     );
   }

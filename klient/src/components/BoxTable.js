@@ -9,6 +9,7 @@ class BoxTable extends Component {
   render() {
     return (
       <div>
+        <h1>Shippling list</h1>
         <table>
           <thead>
             <tr>
@@ -35,10 +36,10 @@ class BoxTable extends Component {
               );
             })}
 
-            <tr>
-              <td>totalweight: </td>
+            <tr id="summary">
+              <td>totalweight </td>
               <td>{this.props.totalWeight.toFixed(2)}</td>
-              <td>totalprice: </td>
+              <td>totalprice </td>
               <td>{this.props.totalPrice.toFixed(2)}</td>
               <td> </td>
             </tr>

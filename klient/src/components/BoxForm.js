@@ -8,7 +8,8 @@ import NameInput from "./NameInput";
 class BoxForm extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="boxForm">
+        <h1>Depart box</h1>
         <NameInput />
         <WeightInput />
         <ColorPicker />

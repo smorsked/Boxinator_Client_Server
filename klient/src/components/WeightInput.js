@@ -4,9 +4,11 @@ import { connect } from "react-redux";
 class WeightInput extends Component {
   render() {
     return (
-      <div className={this.props.valid}>
+      <div id="input-wrapper">
         Weight
+        <br />
         <input
+          className={this.props.valid}
           id="number"
           type="text"
           onBlur={() => {
@@ -14,7 +16,7 @@ class WeightInput extends Component {
           }}
           onChange={this.props.onNumberChange}
         />
-        <div>{this.props.errors}</div>
+        <div className="errorText">{this.props.errors}</div>
       </div>
     );
   }

@@ -1,1 +1,1 @@
-# Combined client and server for the Boxinator project
+# Combined server/client for Boxinator

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./css/styles.css";
 import { Route, Switch, HashRouter, Link } from "react-router-dom";
 import { connect } from "react-redux";
 import BoxTable from "./components/BoxTable";
@@ -9,18 +9,22 @@ class App extends Component {
   render() {
     return (
       <HashRouter basename="/">
-        <div>
-          <Link onClick={this.props.onReset} to="/addbox">
-            Add Box
-          </Link>
-          <br />
-          <Link onClick={this.props.onReset} to="/listboxes">
-            List Boxes
-          </Link>
-          <Switch>
-            <Route path="/addbox" component={BoxForm} />
-            <Route path="/listboxes" component={BoxTable} />
-          </Switch>
+        <div id="body">
+          <div id="navigator">
+            <Link className="link" onClick={this.props.onReset} to="/addbox">
+              Add
+            </Link>
+            <Link className="link" onClick={this.props.onReset} to="/listboxes">
+              List
+            </Link>
+            <div />
+          </div>
+          <div id="content">
+            <Switch>
+              <Route path="/addbox" component={BoxForm} />
+              <Route path="/listboxes" component={BoxTable} />
+            </Switch>
+          </div>
         </div>
       </HashRouter>
     );

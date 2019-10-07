@@ -4,9 +4,11 @@ import { connect } from "react-redux";
 class NameInput extends Component {
   render() {
     return (
-      <div className={this.props.valid}>
+      <div id="input-wrapper">
         Name
+        <br />
         <input
+          className={this.props.valid}
           type="text"
           onBlur={() => {
             this.props.onvalidate();
@@ -15,7 +17,7 @@ class NameInput extends Component {
             this.props.onNameChange(evt.target.value);
           }}
         />
-        <div>{this.props.errorText}</div>
+        <div className="errorText">{this.props.errorText}</div>
       </div>
     );
   }

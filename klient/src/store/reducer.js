@@ -4,7 +4,7 @@ let tools = new ValidationToolBox();
 const initialState = {
   name: "",
   weight: 0,
-  color: "#ff0000",
+  color: "#2ab3bf",
   destination: [],
   destinations: [],
   progress: false,
@@ -123,14 +123,14 @@ const reducer = (state = initialState, action) => {
     }
   }
   if (action.type === "RESET_INPUTS") {
-    newState.name = "";
-    newState.weight = 0;
-    newState.color = "#ff0000";
-    newState.destination = [];
-    newState.colorErrorText = "";
-    newState.nameErrorText = "";
-    newState.weightErrorText = "";
-    newState.destinationErrorText = "";
+    newState.name = initialState.name;
+    newState.weight = initialState.weight;
+    newState.color = initialState.color;
+    newState.destination = initialState.destination;
+    newState.colorErrorText = initialState.colorErrorText;
+    newState.nameErrorText = initialState.nameErrorText;
+    newState.weightErrorText = initialState.weightErrorText;
+    newState.destinationErrorText = initialState.destinationErrorText;
     newState.errors = initialState.errors;
   }
 

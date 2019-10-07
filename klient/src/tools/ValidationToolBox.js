@@ -1,8 +1,8 @@
 function ValidationToolBox() {
   /*
-  input type:
-  string representation of RGB color in the folowing format: "#RRGGBB"
-  where RR, GG, and BB respectivly represents hexadecimal numbers*/
+    input type:
+    string representation of RGB color in the folowing format: "#RRGGBB"
+    where RR, GG, and BB respectivly represents hexadecimal numbers*/
   this.isBlue = function(stringColor) {
     let R = stringColor[1] + stringColor[2];
     let G = stringColor[3] + stringColor[4];
@@ -20,9 +20,9 @@ function ValidationToolBox() {
     G = G - min;
 
     /*FYI I draw the boundary of wheter a color blue from a turquoise(R:0 G:255 B:255) all the way to purple(R:127 G:0 B:255).
-    That is if the saturation is maxed out, and brightness is at 50%. The detemening factor is the *differance* in proportions between RGB,
-    so the boundory in differential terms would be turquoise(R:0.0 G:1.0 B:1.0) all the way to purple(R:0.5 G:0.0 B:1.0). To get the difference
-    in RGB I subtract the least prominant color from RGB to get the least prominat color to 0 and the remaining two in teh right proportions.*/
+      That is if the saturation is maxed out, and brightness is at 50%. The detemening factor is the *differance* in proportions between RGB,
+      so the boundory in differential terms would be turquoise(R:0.0 G:1.0 B:1.0) all the way to purple(R:0.5 G:0.0 B:1.0). To get the difference
+      in RGB I subtract the least prominant color from RGB to get the least prominat color to 0 and the remaining two in teh right proportions.*/
     //check if blue is the most prominant color
     if (B > G && B > R) {
       if (G < R) {
@@ -35,8 +35,8 @@ function ValidationToolBox() {
     return false;
   };
   /*
-  input type:
-  String representation of a number*/
+    input type:
+    String representation of a number*/
   this.isNumeric = function(stringNumber) {
     let myString = "" + stringNumber;
     let stringLength = myString.length;
@@ -51,8 +51,8 @@ function ValidationToolBox() {
     return true;
   };
   /*
-  input type:
-  String representation of a two digit hexadecimal number*/
+    input type:
+    String representation of a two digit hexadecimal number*/
   this.isHex = function(hexString) {
     if (hexString !== undefined) {
       // checks if all the characters (except for the "#") are from 0-f hex
@@ -70,8 +70,8 @@ function ValidationToolBox() {
     return false;
   };
   /*
-  input type:
-  String representation of color*/
+    input type:
+    String representation of color*/
   this.isColor = function(stringColor) {
     if (stringColor !== undefined) {
       if (stringColor.length < 1) {
@@ -96,9 +96,9 @@ function ValidationToolBox() {
     return false;
   };
   /*
-  Input types:
-  destination = json object with the form {name: String, countryCode: String of size 2, priceMultiplier: float}
-  destArr = array with destinations from database*/
+    Input types:
+    destination = json object with the form {name: String, countryCode: String of size 2, priceMultiplier: float}
+    destArr = array with destinations from database*/
   this.isValidDestination = function(dest, arrayDest) {
     if (dest !== undefined && arrayDest !== undefined) {
       for (let i = 0; i < arrayDest.length; i++) {
@@ -116,9 +116,9 @@ function ValidationToolBox() {
     return false;
   };
   /*
-  Input types:
-  destination = string of size 2(international country code)
-  destArr = array with destinations from database*/
+    Input types:
+    destination = string of size 2(international country code)
+    destArr = array with destinations from database*/
   this.validateDestination = function(destination, destArr) {
     if (destination !== undefined && destArr !== undefined) {
       for (let i = 0; i < destArr.length; i++) {
@@ -132,8 +132,8 @@ function ValidationToolBox() {
     return false;
   };
   /*
-  input type:
-  String with valid color value of #RRGGBB*/
+    input type:
+    String with valid color value of #RRGGBB*/
   this.validateColor = function(color) {
     if (color !== undefined) {
       if (!this.isBlue(color)) {
@@ -146,8 +146,8 @@ function ValidationToolBox() {
     return false;
   };
   /*
-  input type:
-  String (representing an integer)*/
+    input type:
+    String (representing an integer)*/
   this.validateWeight = function(weight) {
     if (weight !== undefined) {
       if (weight !== undefined) {
@@ -162,8 +162,8 @@ function ValidationToolBox() {
     return false;
   };
   /*
-  inut type:
-  String of arbitrairy size > 0*/
+    inut type:
+    String of arbitrairy size > 0*/
   this.validateName = function(name) {
     if (name !== undefined) {
       if (name !== undefined && name.length > 0 && name.length < 101) {
@@ -174,11 +174,11 @@ function ValidationToolBox() {
     return false;
   };
   /* 
-  input types: 
-  box of type json with values as follows:
-   name:string, weight:integer, color, String(#RRGGBB in hex), countryCode: xx(international countrycode) from database
-  destArr of type array of arbitrairy size with elements of type json example:
-   {name: String, weight: integer, color:String(#RRGGBB in hex), countryCode:String (international countrycode) from database}*/
+    input types: 
+    box of type json with values as follows:
+     name:string, weight:integer, color, String(#RRGGBB in hex), countryCode: xx(international countrycode) from database
+    destArr of type array of arbitrairy size with elements of type json example:
+     {name: String, weight: integer, color:String(#RRGGBB in hex), countryCode:String (international countrycode) from database}*/
   this.validateSave = function(box, destArr) {
     if (!this.validateName(box.name)) {
       return false;

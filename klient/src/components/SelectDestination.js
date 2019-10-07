@@ -8,9 +8,13 @@ class SelectDestination extends Component {
   }
   render() {
     return (
-      <div className={this.props.valid}>
+      <div id="input-wrapper">
         Destination
-        <select onChange={this.props.onChangeDestination}>
+        <br />
+        <select
+          className={this.props.valid}
+          onChange={this.props.onChangeDestination}
+        >
           <option>-choose dest-</option>
           {this.props.destinations.map((dest, index) => {
             return (
@@ -20,7 +24,7 @@ class SelectDestination extends Component {
             );
           })}
         </select>
-        <div>{this.props.errorText}</div>
+        <div className="errorText">{this.props.errorText}</div>
       </div>
     );
   }
